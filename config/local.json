@@ -1,0 +1,7 @@
+{
+  "goesUrl": "tcp://127.0.0.1:12345",
+  "goesStoragePath": "c:/temp/smash-api-dev-events",
+  "publicHostname": "localhost",
+  "httpPort": 8080,
+  "useHttps": false
+}

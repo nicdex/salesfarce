@@ -1,0 +1,35 @@
+{
+  "name": "salesfarce",
+  "version": "1.0.0",
+  "description": "Opensource Lead System",
+  "main": "src/app.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "glob": "^7.0.5",
+    "goes-client": "latest",
+    "nodeunit": "latest",
+    "on-response": "^1.0.1",
+    "uuid": "latest",
+    "zmq": "latest"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.13.2"
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "prestart": "npm run build",
+    "start": "node dist/app local",
+    "pretest": "npm run build",
+    "test": "nodeunit"
+  },
+  "keywords": [
+    "sales",
+    "salesfarce",
+    "leads"
+  ],
+  "author": "",
+  "license": "UNLICENSED"
+}
