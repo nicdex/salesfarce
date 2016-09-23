@@ -13,8 +13,8 @@ var onResponse = require('on-response');
 
 var createGoesClient = require('goes-client').client;
 var createGoesReader = require('goes-client').reader;
-var commandHandlerFactory = require('./commandHandler');
-var ReadRepository = require('./ReadRepository');
+var commandHandlerFactory = require('./services/commandHandler');
+var ReadRepository = require('./services/ReadRepository');
 
 import {newInject} from './utils';
 import Logger from './services/logger';
