@@ -45,8 +45,8 @@ function ReadRepository(goesReader, logger) {
     if (!model) {
       throw new Error('model parameter is missing.');
     }
-    if (!model.builder || !model.filters) {
-      throw new TypeError('model MUST have builder and filters properties.');
+    if (!model.reducer || !model.filters) {
+      throw new TypeError('model MUST have reducer and filters properties.');
     }
     logger.info('Defining model:', modelName);
     models[modelName] = model;
@@ -80,7 +80,7 @@ function ReadRepository(goesReader, logger) {
         .then(function (dependencyProvider) {
           return getAllFor(model.filters)
               .then(function (events) {
-                return events.reduce(model.builder.bind(dependencyProvider), []);
+                return events.reduce(model.reducer.bind(dependencyProvider), []);
               });
         });
   }
