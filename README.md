@@ -8,19 +8,46 @@ https://www.meetup.com/DDD-CQRS-ES/events/233590334/
 
 https://www.meetup.com/DDD-CQRS-ES/events/233590625/
 
-Requires nodejs v4.0+
-
-Requires [GoES](ttp://github.com/nicdex/goes) to store events.
-
 ## Getting Started
 
-Install modules
+### Requirements
+
+* [NodeJS](https://nodejs.org) v4.5+
+* [GoES](ttp://github.com/nicdex/goes) to store events
+
+#### Windows only
+
+Requirements so that npm install can compile native modules.  
+
+* windows-build-tools package installed
+  * `npm install --global windows-build-tools` (**IMPORTANT**: must be run as Administrator)
+  
+*This step can be skipped if you can already compile native nodejs modules on your computer.*
+
+#### Linux only
+
+Requirements so that npm install can compile native modules.
+
+* build-essential package installed 
+  * `sudo apt-get install build-essential`
+
+#### Mac OSX
+
+*TODO*
+
+### Install modules
 
 `npm install`
 
-Start app
+### Start app
 
 `npm start`
+
+HTTP is running at `http://localhost:8080`
+
+### Run tests
+
+`npm test`
 
 ## Events (as of 9/22/2016):
 

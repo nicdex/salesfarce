@@ -1,21 +1,8 @@
-import {randomBytes} from 'crypto';
-
 export function getTypeName(obj) {
   if (obj && obj.constructor && obj.constructor.name) {
     return obj.constructor.name;
   }
   return typeof obj;
-}
-
-const POSSIBLE_CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-export function generateRandomCode(length) {
-  let buf = randomBytes(length);
-  let chars = [];
-  for (let i = 0; i < length; i++) {
-    var ch = buf[i] % 36;
-    chars.push(POSSIBLE_CHARS[ch]);
-  }
-  return chars.join('');
 }
 
 function newCall(Cls, args) {

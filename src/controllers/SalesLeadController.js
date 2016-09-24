@@ -19,7 +19,7 @@ export default class SalesLeadController {
           });
     }
 
-    app.post('/api/v1/salesLeads/receive', receiveSalesLead);
+    app.post('/api/v1/salesLead/receive', receiveSalesLead);
 
     function getAllSalesLead(req, res) {
       readRepository.findAll('salesLeads')
@@ -32,6 +32,6 @@ export default class SalesLeadController {
           });
     }
 
-    app.get('/api/v1/salesLeads', getAllSalesLead);
+    app.get('/api/v1/salesLead', getAllSalesLead);
   }
 }
