@@ -13,22 +13,21 @@ https://www.meetup.com/DDD-CQRS-ES/events/233590625/
 ### Requirements
 
 * [NodeJS](https://nodejs.org) v4.5+
-* [GoES](ttp://github.com/nicdex/goes) to store events
+* [GoES](http://github.com/nicdex/goes) to store events
+  * install using `npm install goes-install` (Only supported for Windows and Linux for now)
+  
+### Requirements to compile native NodeJS modules (i.e. zmq).
 
-#### Windows only
+#### Windows
 
-Requirements so that npm install can compile native modules.  
-
-* windows-build-tools package installed
+* windows-build-tools npm package installed
   * `npm install --global windows-build-tools` (**IMPORTANT**: must be run as Administrator)
   
 *This step can be skipped if you can already compile native nodejs modules on your computer.*
 
-#### Linux only
+#### Linux
 
-Requirements so that npm install can compile native modules.
-
-* build-essential package installed 
+* build-essential distribution package installed 
   * `sudo apt-get install build-essential`
 
 #### Mac OSX
@@ -41,9 +40,23 @@ Requirements so that npm install can compile native modules.
 
 ### Start app
 
+#### 1) Start GoES
+
+Windows
+
+`start .deps\goes\bin\goes.exe --db=c:\temp\salesfarce-events`
+
+Linux
+
+`.deps/goes/bin/goes --db=/tmp/salesfarce-events &`
+
+#### 2) Start the API
+
 `npm start`
 
-HTTP is running at `http://localhost:8080`
+HTTP API is running at `http://localhost:8080/`
+
+*Note: Linux user must adjust the goesStoragePath in config/local.json to /tmp/salesfarce-events before starting the app*
 
 ### Run tests
 
